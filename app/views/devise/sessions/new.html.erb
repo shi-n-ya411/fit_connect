@@ -3,6 +3,8 @@
 </div>
 
 <%= form_with(model: resource, as: resource_name, url: session_path(resource_name), html: { class: 'form-signin col-md-6 mx-auto' }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
   <div class="form-group">
     <%= f.label :email, class: 'form-label' %>
     <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
