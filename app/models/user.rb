@@ -9,4 +9,6 @@ class User < ApplicationRecord
   validates :name, presence: true
   
   enum role: { default: 0, general: 1 }
+
+  has_many :posts
 end
